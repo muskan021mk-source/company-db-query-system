@@ -1,0 +1,22 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Node / frontend
+node_modules/
+dist/
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# DB dumps that may contain real data
+backup.sql

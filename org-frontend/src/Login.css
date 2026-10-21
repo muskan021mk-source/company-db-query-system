@@ -1,0 +1,199 @@
+/* Assumes the same CSS variables / light-mode toggle (.app.light) that
+   App.css already defines. Rename the variables below if yours differ. */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary, #0f0f10);
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--bg-secondary, #18181a);
+  border: 1px solid var(--border-color, #2a2a2d);
+  border-radius: 16px;
+  padding: 36px 32px 28px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.login-brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--accent, #6366f1);
+  color: #fff;
+}
+
+.login-brand-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary, #f2f2f3);
+}
+
+.login-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--text-primary, #f2f2f3);
+}
+
+.login-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary, #9a9a9e);
+  margin: 0 0 24px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-field label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary, #9a9a9e);
+}
+
+.login-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color, #2a2a2d);
+  background: var(--bg-primary, #0f0f10);
+  color: var(--text-primary, #f2f2f3);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.login-field input:focus {
+  border-color: var(--accent, #6366f1);
+}
+
+.login-field input:disabled {
+  opacity: 0.6;
+}
+
+.login-password-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-password-wrap input {
+  padding-right: 38px;
+}
+
+.login-eye-btn {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--text-secondary, #9a9a9e);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.login-eye-btn:hover {
+  color: var(--text-primary, #f2f2f3);
+}
+
+.login-error {
+  font-size: 12.5px;
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.login-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 11px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent, #6366f1);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.login-submit-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.login-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-spinner {
+  animation: login-spin 0.8s linear infinite;
+}
+
+@keyframes login-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login-switch {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-secondary, #9a9a9e);
+}
+
+.login-switch-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent, #6366f1);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-switch-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Light theme override — mirrors the .app.light pattern from App.css */
+.app.light .login-page {
+  background: var(--bg-primary, #f7f7f8);
+}
